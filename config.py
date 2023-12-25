@@ -53,7 +53,7 @@ class Text(object):
 ➠ /banned :- Total Banned Users 🤕
 ➠ /broadcast :- to Broadcast 💌 a Message to All Users
 
-Send Any Text to Our Bot PM. Get Any Question's Answer with Bot PM. Admin will Check You're All Messages. So you try to Misuse Our Bot to Get Permanent Ban.
+Send Any Text to Our Bot PM. Get Any Question's Answer with Ai Bot PM. Admin will Check You're All Messages. So you don't try to Misuse Our Bot to Get Permanent Ban.
 
 ⚠️ Contact For Any Problem :- [👥 Support Group](https://t.me/Star_Bots_Tamil_Support)</b>"""
 
