@@ -10,7 +10,7 @@ class Bot(Client):
 
     def __init__(self):
         super().__init__(
-            name="Common-Bot",
+            name="ChatGPT-AI-Star-Bot",
             api_id=Config.API_ID,
             api_hash=Config.API_HASH,
             bot_token=Config.BOT_TOKEN,
