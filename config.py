@@ -6,7 +6,7 @@ class Config(object):
     # star bots client config
     API_ID    = os.environ.get("API_ID", "11973721")
     API_HASH  = os.environ.get("API_HASH", "5264bf4663e9159565603522f58d3c18")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6172666504:AAHxMz6jGgnA3t6E-4bAQazswF2fQMAGSHk") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6172666504:AAE7NHAasDmnXn1oBvcjHVh28aQqZhYDnOc") 
    
     # database config
     DATABASE_NAME = os.environ.get("DATABASE_NAME","ChatGPT-AI-Star-Bot") # Bot Username  
