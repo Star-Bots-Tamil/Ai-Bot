@@ -1,7 +1,7 @@
 import time
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from config import Config, temp
+from config import Config
 import openai
 
 openai.api_key = Config.OPENAI_API
@@ -19,23 +19,23 @@ async def ai_answer(client, message):
             lazy_response = response.choices[0].text
             
             btn = [
-                [InlineKeyboardButton(text="⇱🤷‍♀️ Take Action 🗃️⇲", url=f'https://t.me/{temp.U_NAME}')],
-                [InlineKeyboardButton(text="🗑 Delete log ❌", callback_data='close_data')],
+                [InlineKeyboardButton(text="⇱🤷‍♀️ Take Action 🗃️⇲", url=f'https://t.me/Graph_Star_Bot')],
+                [InlineKeyboardButton(text="🗑 Delete log ❌", callback_data='close')],
             ]
             reply_markup = InlineKeyboardMarkup(btn)
-            footer_credit = "🦋<a href='https://telegram.me/LazyDeveloperSupport'>• ʀᴇᴘᴏʀᴛ ɪꜱꜱᴜᴇ •</a>══<a href='https://telegram.me/LazyDeveloperr'>• ᴄᴏɴᴛᴀᴄᴛ ᴍᴀꜱᴛᴇʀ •</a>🦋"
+            footer_credit = "**©️ [Star Bots Tamil](https://t.me/Star_Bots_Tamil)**"
 
             await client.send_message(
                 Config.AI_LOGS,
-                text=f"⚡️⚡️#Lazy_AI_Query \n\n• A user named **{message.from_user.mention}** with user id - `{user_id}`. Asked me this query...\n\n══❚█══Q   U   E   R   Y══█❚══\n\n\n[Q྿.]**{lazy_users_message}**\n\n👇Here is what I responded:\n:-`{lazy_response}`\n\n\n❚═USER ID═❚═• `{user_id}` \n❚═USER Name═❚═• `{message.from_user.mention}` \n\n🗃️",
+                text=f"**⚡️⚡️#Star_AI_Query \n\n• A User Name :- {message.from_user.mention} with User ID :- `{user_id}`. Asked me This Query...\n\n══❚█══Q   U   E   R   Y══█❚══\n\n\n[Query]{lazy_users_message}\n\n👇Here is What I Responded :-\n:-`{lazy_response}`\n\n\n❚═USER ID═❚═• `{user_id}` \n❚═USER Name═❚═• `{message.from_user.first_name}` \n\n🗃️**",
                 parse_mode=enums.ParseMode.MARKDOWN, 
                 reply_markup=reply_markup
             )
-            await message.reply(f"{lazy_response}\n\n\n{footer_credit}", parse_mode=enums.ParseMode.MARKDOWN)
+            await message.reply(f"**{lazy_response}\n\n{footer_credit}**", parse_mode=enums.ParseMode.MARKDOWN)
 
         except Exception as error:
             print(error)
-            await message.reply_text(f'Error occurred: {error}')
+            await message.reply_text(f'**Error :- {error}**')
     else:
         return
 
