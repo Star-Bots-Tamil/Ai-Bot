@@ -6,10 +6,10 @@ class Config(object):
     # star bots client config
     API_ID    = os.environ.get("API_ID", "11973721")
     API_HASH  = os.environ.get("API_HASH", "5264bf4663e9159565603522f58d3c18")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6172666504:AAHxMz6jGgnA3t6E-4bAQazswF2fQMAGSHk") 
    
     # database config
-    DATABASE_NAME = os.environ.get("DATABASE_NAME","") # Bot Username  
+    DATABASE_NAME = os.environ.get("DATABASE_NAME","ChatGPT-AI-Star-Bot") # Bot Username  
     DATABASE_URL  = os.environ.get("DATABASE_URL","mongodb+srv://KarthikMovies:KarthikUK007@cluster0.4l5byki.mongodb.net/?retryWrites=true&w=majority")
  
     # other configs
@@ -19,12 +19,17 @@ class Config(object):
     FORCE_SUB   = os.environ.get("FORCE_SUB", "Star_Bots_Tamil") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001821439025"))
 
+    # AI
+    OPENAI_API = os.environ.get("OPENAI_API","")
+    AI = bool(os.environ.get("AI", True))
+    AI_LOGS = int(os.environ.get("AI_LOGS", LOG_CHANNEL)) #GIVE YOUR NEW LOG CHANNEL ID TO STORE MESSAGES THAT THEY SEARCH IN BOT PM.... [ i have added this to keep an eye on the users message, to avoid misuse of AI Star Bots]
+    
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", True))
 
 class Text(object):
     # part of text configuration
-    START_TEXT = """<b>Hello 👋🏻 {} ❤️,\nI'm An Star Bots Tamil's Official () Bot. This is An Advanced () Bot.\n➠ For More Details Check /help\n\nMaintenance By :- [Star Bots Tamil](https://t.me/Star_Bots_Tamil)</b>"""
+    START_TEXT = """<b>Hello 👋🏻 {} ❤️,\nI'm An Star Bots Tamil's Official ChatGPT Ai Bot. This is An Advanced ChatGPT Ai Bot.\n➠ For More Details Check /help\n\nMaintenance By :- [Star Bots Tamil](https://t.me/Star_Bots_Tamil)</b>"""
 
     ABOUT_TEXT = """<b>🤖 My Name :- {}\n
 🧑🏻‍💻 Developer :- <a href=https://t.me/TG_Karthik><b>Karthik</b></a>\n
@@ -47,6 +52,8 @@ class Text(object):
 ➠ /unban :- Unban a User 😁
 ➠ /banned :- Total Banned Users 🤕
 ➠ /broadcast :- to Broadcast 💌 a Message to All Users
+
+Send Any Text to Our Bot PM. Get Any Question's Answer with Bot PM. Admin will Check You're All Messages. So you try to Misuse Our Bot to Get Permanent Ban.
 
 ⚠️ Contact For Any Problem :- [👥 Support Group](https://t.me/Star_Bots_Tamil_Support)</b>"""
 
