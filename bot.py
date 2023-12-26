@@ -42,8 +42,13 @@ class Bot(Client):
             except:
                 print("Please Make This is Admin in Your Log Channel")
 
-    async def stop(self, *args):
-        await super().stop()      
-        print("Bot Stopped... Bye")
+async def stop(self, *args):
+    try:
+        await super().stop()
+    except Exception as error:
+        print(error)
+        await message.reply_text(f'**Error: {error}**')
+    else:
+        return
        
 Bot().run()
