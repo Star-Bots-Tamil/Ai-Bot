@@ -6,7 +6,7 @@ import openai
 
 openai.api_key = Config.OPENAI_API
 
-@Client.on_message(filters.private & filters.text)
+@Client.on_message(filters.private & filters.text & ~filters.command)
 async def ai_answer(client, message):
     if Config.AI:
         user_id = message.from_user.id
